@@ -3,6 +3,7 @@
 const Shimmer=()=>{
     return(<>
         <div className="flex flex-wrap pl-[4.5rem] gap-x-16 gap-y-16 mt-[5.5rem] animate-pulse">
+            
             {Array(15).fill("").map((e, index)=>(
             <div key={index} className="">
             <div className="w-[260px] h-[180px] bg-[#999] "></div>
