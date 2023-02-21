@@ -6,7 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {  
+      fontFamily: {
+        // sans: ['Poppins', ...defaultTheme.fontFamily.sans]
+        poppins: ['Poppins'],
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }

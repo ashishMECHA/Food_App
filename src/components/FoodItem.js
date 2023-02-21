@@ -1,7 +1,8 @@
 const FoodItem = ({name, description, cloudinaryImageId, price}) => {
 
     return(
-        <div className="flex justify-between basis-[848px] max-h-[250px] p-5 border-b border-gray">
+      <>
+        <div className="flex basis-[848px] max-h-[250px] p-5 ml-10">
         <div className="flex flex-col basis-[400px]">
               <p className="font-bold text-lg w-3/5">{name}</p>
               <p className="text-base">&#8377;{price/100}</p>
@@ -18,6 +19,7 @@ const FoodItem = ({name, description, cloudinaryImageId, price}) => {
                 </div>
               </div>
         </div>
+        </>
     )
 }
 export default FoodItem;

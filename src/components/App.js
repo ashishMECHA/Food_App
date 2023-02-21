@@ -6,11 +6,13 @@ import Footer from "./Footer"
 import About from "./About"
 import Cart from "./Cart"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
-import Contact from "./Contact"
+import Help from "./Help"
 import RestaurantMenu from "./RestaurantMenu"
 import ProfileClass from "./ProfileClass"
 import { Provider } from "react-redux"
 import store from "../utils/store"
+import Search from "./Search"
+
 
 const AppLayout=()=>{
     return(
@@ -44,8 +46,8 @@ const appRouter = createBrowserRouter([
             element: <Body/>,
         },
         {
-            path: "/contact",
-            element: <Contact/>,
+            path: "/help",
+            element: <Help/>,
         },
         {
             path: "/cart",
@@ -55,6 +57,10 @@ const appRouter = createBrowserRouter([
             path: "/restaurant/:resId",
             element: <RestaurantMenu/>,
         },
+        {
+            path: "/search",
+            element: <Search/>
+        }
     ]
     },       
 ])

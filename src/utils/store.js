@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+import carousalSlice from "./carousalSlice";
 import cartSlice from "./cartSlice";
+import restaurantSlice from "./restaurantSlice";
 
 const store = configureStore({
     reducer: {
         cart: cartSlice,
+        restaurant: restaurantSlice,
+        carousal: carousalSlice,
     }
 });
 
