@@ -12,7 +12,7 @@ import ProfileClass from "./ProfileClass"
 import { Provider } from "react-redux"
 import store from "../utils/store"
 import Search from "./Search"
-import Carousal from "./Carousal"
+
 
 
 const AppLayout=()=>{
@@ -45,7 +45,6 @@ const appRouter = createBrowserRouter([
         {
             path: "/",
             element: <Body/>,
-            
         },
         {
             path: "/help",

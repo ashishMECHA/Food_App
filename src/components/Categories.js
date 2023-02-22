@@ -1,3 +1,38 @@
+export const keywords = [
+  "Relevance",
+  "Delivery Time",
+  "Rating",
+  "Cost: Low To High",
+  "Cost: High To Low",
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React, { useState } from 'react'
 // import { useSelector } from 'react-redux';
 
@@ -26,10 +61,3 @@
 // }
 
 // export default Categories
-export const keywords = [
-  "Relevance",
-  "Delivery Time",
-  "Rating",
-  "Cost: Low To High",
-  "Cost: High To Low",
-]

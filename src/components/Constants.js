@@ -6,6 +6,10 @@ export const IMG_CDN_URL =
 export const FETCH_MENU_URL =
   "https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId=";
 
+export const CATEGORIES_URL = 
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7095&lng=76.7744&page_type=DESKTOP_WEB_LISTING&sortBy="
+
+
 export const CAROUSAL_IMG_CDN =
  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
 
