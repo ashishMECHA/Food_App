@@ -11,7 +11,7 @@ const Search = () => {
 
 
     return(
-        <div className=''>
+        <div className='mb-96'>
         <div className="ml-[16rem] mb-5 mt-[80px] text-base">
         <input
           className="bg-gray-200 pl-2 pt-3 pb-3 pr-40 mt-4 w-[70%] outline-none"

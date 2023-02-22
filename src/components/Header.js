@@ -112,7 +112,7 @@ const Header = () => {
                   </svg>
                 }
                 item="Cart"
-              /><p className="absolute top-[21px] right-[6.2rem] text-white text-sm">{itemsCount}</p>
+              /><p className="absolute top-[22px] right-[6.3rem] text-white text-[13px]">{itemsCount}</p>
             </li></Link>
           </ul>
         </div>

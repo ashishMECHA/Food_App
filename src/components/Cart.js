@@ -1,18 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartFallback from "./CartFallback";
-import FoodItem from "./FoodItem"
-
+import ItemQuantity from "./ItemQuantity";
+import useItemTotal from "../utils/useItemTotal";
+import { Link } from "react-router-dom";
 
 
 
 const Cart = () => {
 
     const cartItems = useSelector((store) => store.cart.items);
-    const address = useSelector((store) => store.cart.deliveryAddress);
-    const payment = useSelector((store) => store.cart.paymentMethod);
-    const dispatch = useDispatch();
-    const totalItems = useSelector((store) => store.cart.totalItemsCount);
-    console.log(cartItems)
+    const itemsCount = useSelector((store)=> store.cart.totalItemsCount);
+    const getItemsTotal = useItemTotal();
+    // console.log(cartItems)
 
 
     return Object.values(cartItems).length>0 ?(

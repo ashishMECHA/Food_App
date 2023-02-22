@@ -31,7 +31,7 @@ const RestaurantCard = ({name, cloudinaryImageId, cuisines, avgRating, deliveryT
                     <div className="text-gray-500">•</div>
                     <h4 className="text-xs text-gray-500">{costForTwoString}</h4>
                     </div>
-                    <div className="flex items-center gap-x-1 text-amber-800 pt-2"><MdLocalOffer/>{aggregatedDiscountInfo.shortDescriptionList[0].meta}</div>
+                    <div className="flex items-center gap-x-1 text-amber-800 pt-2"><MdLocalOffer/>{aggregatedDiscountInfo?.shortDescriptionList[0]?.meta}</div>
                     
                 </div>
             )

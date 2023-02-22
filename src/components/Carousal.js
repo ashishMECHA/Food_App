@@ -12,8 +12,8 @@ const Carousal = () => {
     if(!cards) return null;
     return(
         <div className="mt-[4.1rem] mb-[3rem] bg-[#3d4152] flex gap-x-7 justify-around h-[21rem] items-center">
-            {Object.values(cardsArray).map((card)=>(
-                <CarousalCard {...card.data}/>
+            {Object.values(cardsArray).map((card,i)=>(
+                <CarousalCard {...card.data} key={i}/>
             ))}
             
         </div>
