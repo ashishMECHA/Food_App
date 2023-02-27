@@ -35,12 +35,12 @@ const Carousal = () => {
         
         <div className="mt-[4.1rem] mb-[3rem] bg-[#3d4152]">
             <Carousel
-  swipeable={false}
+  swipeable={true}
   draggable={false}
   showDots={false}
   responsive={responsive}
   ssr={true} // means to render carousel on server-side.
-  infinite={true}
+  infinite={false}
   autoPlaySpeed={1000}
   keyBoardControl={true}
   customTransition="all .5"
