@@ -2,10 +2,10 @@
   "name": "food_villa",
   "version": "1.0.0",
   "description": "A food ordering app",
-  "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Ashish Thakur",
   "license": "ISC",
