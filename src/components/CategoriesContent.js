@@ -19,10 +19,10 @@ export const Category = () => {
         const response = await data.json();
         console.log("RESPONSE--> "+response)
         setcategoryRestaurants(response?.data?.cards[0]?.data?.data?.cards);
-        console.log(categoryRestaurants)
+        // console.log(categoryRestaurants)
       }
     return(
-       <div className="flex flex-wrap pl-10 gap-x-10 text-sm gap-y-8 mb-24">
+    <div className="flex flex-wrap pl-10 gap-x-10 text-sm gap-y-8 mb-24">
       {Object.values(categoryRestaurants).map((card)=>(
         <Link to={"/restaurant/" + card.data.id} key={card.data.id}>
         <RestaurantCard {...card.data}/>

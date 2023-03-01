@@ -37,7 +37,7 @@ const Body = () => {
     const response = await data.json();
     setcategoryRestaurants(response?.data?.cards[0]?.data?.data?.cards);
     setShowShimmer(false);
-    console.log(categoryRestaurants);
+    // console.log(categoryRestaurants);
   }
 
   async function getRestaurant() {

@@ -32,7 +32,7 @@ const MenuItem = ({item}) => {
               </div> 
               
               <div className="flex-col justify-center items-center">
-                {!cloudinaryImageId ?<img className="w-[118px] h-[96px] rounded-md" src={"https:/res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/byonwwb8mzxyqluxlqpq"} /> : <img className="w-[118px] h-[96px] rounded-md" src={"https:/res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + item?.cloudinaryImageId} />}
+                {!cloudinaryImageId ?<img className="w-[118px] h-[96px] rounded-md" src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/byonwwb8mzxyqluxlqpq"} /> : <img className="w-[118px] h-[96px] rounded-md" src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + item?.cloudinaryImageId} />}
                 <div className="flex justify-evenly items-center w-[100px] h-[34px] mt-2.5 text-gray-count outline-none border bg-white border-gray ml-[9px]">
                   <button className="text-xl text-orange-500 font-semibold" onClick={()=>{removeFoodItem(id)}}> - </button>
                   <span className="text-base text-green-600 pt-[2px]"> {itemCount} </span>
