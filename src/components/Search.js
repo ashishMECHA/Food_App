@@ -22,11 +22,15 @@ const Search = () => {
             setValue(e.target.value);
           }}
         />
-        <button className="bg-orange-400 pl-3 pr-3 pt-3 pb-3 text-white font-semibold hover:bg-orange-200 hover:text-orange-400"
+        <button className="bg-[#b31e1e] pl-4 pr-4 pt-3 pb-3 text-white font-semibold hover:bg-orange-200 hover:text-[#b31e1e]"
           onClick={() => {
-            const data = filterData(value, restaurants[0]);
-            // console.log(data)
-            setFilteredRestaurants(data);
+            if(value.length==0){
+              return;
+            } else{
+              const data = filterData(value, restaurants[0]);
+              setFilteredRestaurants(data);
+            }
+            
           }}
         >
           Search

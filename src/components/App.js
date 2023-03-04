@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import Header from "./Header"
 import Body from "./Body"
 import Footer from "./Footer"
+import Profile from "./Profile"
 import About from "./About"
 import Cart from "./Cart"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
@@ -35,7 +36,7 @@ const appRouter = createBrowserRouter([
         children:[
         {
             path: "/about",
-            element: <About/>,
+            element: <Profile/>,
             children:[
                 {
                     path: "profile",
