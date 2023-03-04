@@ -24,7 +24,7 @@ const Body = () => {
       setShowShimmer(false);
       redirect("/");
       return;
-    } else{
+    } else {
       getByCategoryData(param);
     }
   };
@@ -44,14 +44,12 @@ const Body = () => {
   async function getRestaurant() {
     const data = await fetch(
       "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7095&lng=76.7744&page_type=DESKTOP_WEB_LISTING"
-      
     );
     const json = await data.json();
     dispatch(addData(json?.data?.cards[2]?.data?.data?.cards));
     dispatch(addItems(json?.data?.cards[0]?.data?.data?.cards));
     setSorts(json.data.sorts);
   }
-
 
   if (!restaurants) return null;
   return restaurants?.length === 0 ? (
@@ -62,49 +60,49 @@ const Body = () => {
 
       {/* CATEGORY SECTION */}
       <div className="ml-auto mr-auto">
-      <div className="flex pl-[3.6rem] items-center font-poppins text-[#3d4152] gap-x-[296px]">
-        <div className="text-3xl font-semibold">
-          {restaurants[0].length} restaurants
+        <div className="flex pl-[3.6rem] items-center font-poppins text-[#3d4152] gap-x-[296px]">
+          <div className="text-3xl font-semibold">
+            {restaurants[0].length} restaurants
+          </div>
+          <div className="flex gap-x-10 text-center cursor-pointer">
+            {Object.values(sort).map((category) => (
+              <p
+                onClick={() => handleClick(category.title, category.key)}
+                key={category.key}
+                className={
+                  activeElement === category.title
+                    ? "border-b-[1px] border-b-[#161824] cursor-pointer"
+                    : "cursor-pointer hover:text-[#161824]"
+                }
+              >
+                {category.title}
+              </p>
+            ))}
+          </div>
         </div>
-        <div className="flex gap-x-10 text-center cursor-pointer">
-          {Object.values(sort).map((category) => (
-            <p
-              onClick={() => handleClick(category.title, category.key)}
-              key={category.key}
-              className={
-                activeElement === category.title
-                  ? "border-b-[1px] border-b-[#161824] cursor-pointer"
-                  : "cursor-pointer hover:text-[#161824]"
-              }
-            >
-              {category.title}
-            </p>
-          ))}
-        </div>
-      </div>
 
-      {/***** CARDS ****/}
-      {activeElement ? (
-        <div className="flex flex-wrap pl-10 gap-x-7 text-sm gap-y-8 mb-24">
-          {categoryRestaurants.length === 0 || showShimmer ? (
-            <Shimmer />
-          ) : (
-            categoryRestaurants.map((card) => (
+        {/***** CARDS ****/}
+        {activeElement ? (
+          <div className="flex flex-wrap pl-10 gap-x-7 text-sm gap-y-8 mb-24">
+            {categoryRestaurants.length === 0 || showShimmer ? (
+              <Shimmer />
+            ) : (
+              categoryRestaurants.map((card) => (
+                <Link to={"/restaurant/" + card.data.id} key={card.data.id}>
+                  <RestaurantCard {...card.data} />
+                </Link>
+              ))
+            )}
+          </div>
+        ) : (
+          <div className="flex flex-wrap pl-10 gap-x-7 text-sm gap-y-8 mb-24">
+            {Object.values(restaurants[0]).map((card) => (
               <Link to={"/restaurant/" + card.data.id} key={card.data.id}>
                 <RestaurantCard {...card.data} />
               </Link>
-            ))
-          )}
-        </div>
-      ) : (
-        <div className="flex flex-wrap pl-10 gap-x-7 text-sm gap-y-8 mb-24">
-          {Object.values(restaurants[0]).map((card) => (
-            <Link to={"/restaurant/" + card.data.id} key={card.data.id}>
-              <RestaurantCard {...card.data} />
-            </Link>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
