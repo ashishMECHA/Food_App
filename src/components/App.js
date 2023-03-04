@@ -12,6 +12,7 @@ import ProfileClass from "./ProfileClass"
 import { Provider } from "react-redux"
 import store from "../utils/store"
 import Search from "./Search"
+import Offers from "./Offers"
 
 
 
@@ -49,6 +50,10 @@ const appRouter = createBrowserRouter([
         {
             path: "/help",
             element: <Help/>,
+        },
+        {
+            path: "/offers",
+            element: <Offers/>,
         },
         {
             path: "/cart",

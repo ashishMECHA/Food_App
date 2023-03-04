@@ -28,7 +28,7 @@ const Header = () => {
   const itemsCount = useSelector((store) => store.cart.totalItemsCount);
 
   return (
-      <div className="font-normal font-poppins text-[15px] text-[#3d4152] flex shadow-md justify-between text-center items-center fixed top-0 left-0 w-[100%] bg-white z-50 pl-[3rem] pr-[3.3rem]">
+      <div className="font-normal font-poppins text-[15px] text-[#3d4152] flex shadow-md justify-between text-center items-center fixed top-0 left-0 w-[100%] bg-white z-50 pl-[4.1rem] pr-[5rem]">
         <div>
           <Title />
         </div>

@@ -24,8 +24,9 @@ const Body = () => {
       setShowShimmer(false);
       redirect("/");
       return;
+    } else{
+      getByCategoryData(param);
     }
-    getByCategoryData(param);
   };
 
   useEffect(() => {
@@ -51,6 +52,7 @@ const Body = () => {
     setSorts(json.data.sorts);
   }
 
+
   if (!restaurants) return null;
   return restaurants?.length === 0 ? (
     <Shimmer />
@@ -65,7 +67,7 @@ const Body = () => {
           {restaurants[0].length} restaurants
         </div>
         <div className="flex gap-x-10 text-center cursor-pointer">
-          {Object.values(sort).map((category, i) => (
+          {Object.values(sort).map((category) => (
             <p
               onClick={() => handleClick(category.title, category.key)}
               key={category.key}
