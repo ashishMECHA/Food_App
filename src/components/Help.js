@@ -17,7 +17,7 @@ const Help = () =>{
     const [visibleSection, setVisibleSection] = useState(""); /* Initially description of all questions are hidden */
 
   return (
-    <div className="container mt-20">
+    <div className="container mt-20 mb-10">
       <div className="">
       <h1 className="text-3xl font-poppins text-zinc-800 font-bold pb-5 ml-[50%]"> FAQ</h1>
       {FAQ.map((question) => {
