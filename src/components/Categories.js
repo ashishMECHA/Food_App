@@ -1,10 +1,48 @@
-export const keywords = [
-  "Relevance",
-  "Delivery Time",
-  "Rating",
-  "Cost: Low To High",
-  "Cost: High To Low",
-]
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCategories } from "./categoriesSlice";
+
+function CategoriesBar() {
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
+  const status = useSelector((state) => state.categories.status);
+  const error = useSelector((state) => state.categories.error);
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch]);
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "failed") {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div className="flex justify-center mt-4">
+      <div className="flex border-b-2">
+        {["All", ...categories].map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 ${
+              activeCategory === category
+                ? "border-b-2 border-blue-500"
+                : ""
+            }`}
+            onClick={() => handleClick(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default CategoriesBar;
+
 
 
 

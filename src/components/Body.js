@@ -59,7 +59,7 @@ const Body = () => {
       <Carousal />
 
       {/* CATEGORY SECTION */}
-      <div className="ml-auto mr-auto">
+      <div className="">
         <div className="flex pl-[3.6rem] items-center font-poppins text-[#3d4152] gap-x-[296px]">
           <div className="text-3xl font-semibold">
             {restaurants[0].length} restaurants

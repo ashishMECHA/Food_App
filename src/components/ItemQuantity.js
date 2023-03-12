@@ -9,8 +9,8 @@ const ItemQuantity = ({item}) => {
   return (
     <div className="flex border border-gray w-16 justify-around items-center">
         <button onClick={()=>{dispatch(removeItem(item.id))}} className="text-xl">-</button>
-        <p className="text-green text-sm">{item.quantity}</p>
-        <button onClick={()=>{dispatch(addItem(item))}} className="hover:scale-110 delay-100 transition-all ">+</button>
+        <p className="text-green text-sm text-green-600 ">{item.quantity}</p>
+        <button onClick={()=>{dispatch(addItem(item))}} className="text-green-600 hover:scale-110 delay-100 transition-all ">+</button>
     </div>
   )
 }

@@ -52,12 +52,12 @@ const Cart = () => {
 
             <div>
                    <div className="font-poppins flex flex-col mt-5 ml-20 pl-2 pr-2 mb-4 shadow-xl">
-                   <p className="font-medium">Cart</p>
-                   <p className="text-gray-400 font-light">{itemsCount}</p>
+                   <span className=" flex justify-center font-medium">Cart</span>
+                   {/* <span className="text-gray-900 font-light">{itemsCount}</span> */}
                    <div className="scrollbar-thin h-40">
                      {Object.values(cartItems).map((item) => (
                        <div className="flex items-center mt-2 justify-between">
-                         <p className="w-40 text-sm">{item.name}</p>
+                         <p className="w-40 text-sm font-medium">{item.name}</p>
                          <div className="w-30 px-5">
                            <ItemQuantity item={item} key={item.id} />
                          </div>
@@ -70,13 +70,13 @@ const Cart = () => {
                    </div>
                    <div className="border border-gray my-2"></div>
                    <div className="flex justify-between mt-4">
-                     <p className="text-sm text-bio ">Sub Total</p>
+                     <p className="text-sm text-bio font-medium ">Sub Total</p>
                      {"₹ " + getItemsTotal()}
                    </div>
                    <div className="flex justify-center mt-7 mb-2">
                      <Link to="/cart">
                        {" "}
-                       <button className="bg-[#5faf65] px-4 py-2 text-white hover:drop-shadow-lg backdrop-blur">
+                       <button className="bg-green-600  px-12 py-2 text-white hover:drop-shadow-lg backdrop-blur">
                          {" "}
                          PAY
                        </button>
