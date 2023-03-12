@@ -33,7 +33,7 @@ const Carousal = () => {
 
     return(
         
-        <div className="mt-[4.1rem] mb-[3rem] bg-[#3d4152]">
+        <div className="mt-[4.1rem] mb-[3rem] bg-gray-900">
             <Carousel
   swipeable={true}
   draggable={false}
