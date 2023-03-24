@@ -11,7 +11,7 @@ export const CATEGORIES_URL =
 
 
 export const CAROUSAL_IMG_CDN =
- "https://corsanywhere.herokuapp.com/https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
+ "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/";
 
   
 export const restaurantList = [
