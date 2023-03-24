@@ -22,7 +22,7 @@ const CheckOut = () => {
     //     </div>
     // )
   return Object.values(cartItems).length>0 ?(
-    <div className="font-poppins flex flex-col mt-5 ml-20 pl-2 pr-2 mb-4 shadow-xl">
+    <div className="font-poppins flex flex-col ml-10 pl-2 pr-2 mb-4 shadow-xl">
           <p className="font-medium">Cart</p>
           <p className="text-gray-400 font-light">{itemsCount}</p>
           <div className="scrollbar-thin h-40">
@@ -55,7 +55,7 @@ const CheckOut = () => {
           </div>
         </div>
   ) : (
-    <div className="w-[348px] shadow-xl font-poppins flex flex-col mt-5 ml-20 pr-2 mb-4">
+    <div className="w-[348px] shadow-xl font-poppins flex flex-col ml-10 pr-2 mb-4">
           <CartFallback
             text={
               "Good food is always cooking! Go ahead, order some yummy items from the menu."

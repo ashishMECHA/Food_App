@@ -4,16 +4,17 @@ import Header from "./Header"
 import Body from "./Body"
 import Footer from "./Footer"
 import Profile from "./Profile"
-import About from "./About"
+// import About from "./About"
 import Cart from "./Cart"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import Help from "./Help"
-import RestaurantMenu from "./RestaurantMenu"
+// import RestaurantMenu from "./RestaurantMenu"
 import ProfileClass from "./ProfileClass"
 import { Provider } from "react-redux"
 import store from "../utils/store"
 import Search from "./Search"
 import Offers from "./Offers"
+import RestaurantDetails from "./RestaurantDetails"
 
 
 
@@ -62,7 +63,7 @@ const appRouter = createBrowserRouter([
         },
         {
             path: "/restaurant/:resId",
-            element: <RestaurantMenu/>,
+            element: <RestaurantDetails/>,
         },
         {
             path: "/search",

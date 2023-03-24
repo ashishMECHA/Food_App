@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/swiggy-1.svg";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 
