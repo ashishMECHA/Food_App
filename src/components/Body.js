@@ -21,9 +21,8 @@ const Body = () => {
     setShowShimmer(true);
     setActiveElement(value);
     if (param === "RELEVANCE") {
-      setShowShimmer(false);
-      redirect("/");
-      return;
+      getByCategoryData("RATING");
+    return;
     } else {
       getByCategoryData(param);
     }
